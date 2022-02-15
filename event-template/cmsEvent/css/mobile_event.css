@@ -1,0 +1,73 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:300&subset=korean);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap);
+
+.skip{overflow:hidden;position:absolute;top:-999em;left:-999em;width:1px;height:1px}
+.btn_gcp,.btn_gcp_v2{border:0!important; line-height: normal!important; height:auto!important; padding:0!important;}
+
+/* 공통 장바구니 쿠폰 */
+._promotion .cont_coupon .coupon_wrap a {display:block; width:100%; height:40px !important; margin:10px auto 22px; text-align:center; color:#fff; font-size:14px;  font-weight:500 !important; line-height:41px !important;}
+._promotion .cont_coupon .coupon_wrap .icon_dwn {position:relative; top:1px; display:inline-block; background:url(https://event-rs.hiphoper.com/event_marketing/benefit/common/bg_icon_benefit_pc.png) no-repeat top center;background-size: 100% auto; width: 15px; height: 12px; margin:0 0 0 5px}
+._promotion .cont_coupon .coupon_wrap .icon_dwn_b {position:relative; top:1px; display:inline-block; background:url(https://event-rs.hiphoper.com/event_marketing/benefit/common/bg_icon_benefit_pc2.png) no-repeat top center;background-size: 100% auto; width: 15px; height: 12px; margin:0 0 0 5px}
+._promotion .cont_coupon .coupon_wrap .ref li {position:relative;font-weight:400; font-size:11px; color:#ababab; line-height:1.2; margin:0 0 5px; padding:0 0 0 5px; letter-spacing:-0.1px;text-align:left;}
+._promotion .cont_coupon .coupon_wrap .ref li:before {content:'';display:inline-block;width:2px;height:2px;margin:5px 4px 0 -5px;vertical-align:top;background:#ababab;border-radius:2px;}
+._promotion .cont_coupon .coupon_wrap .ref li span {display:inline-block; width:55px; font-size:0;}
+._promotion .cont_coupon .coupon_wrap .ref li em {font-weight:700;}
+
+/* 공통 장바구니 쿠폰 */
+.mobile_event .cont_coupon {padding: 41px 40px; text-align: center;}
+.mobile_event .cont_coupon .title_wrap {line-height: 1.2;}
+.mobile_event .cont_coupon .title_wrap h3 {font-family:'Montserrat'; font-size: 25px; font-weight: 500;}
+.mobile_event .cont_coupon .title_wrap p {font-family:'Noto Sans KR'; font-size: 21px; font-weight: 500;}
+.mobile_event .cont_coupon .coupon_wrap {padding: 19px 45px 13px;}
+.mobile_event .cont_coupon .coupon_text {padding: 0 0 32px 0;}
+.mobile_event .cont_coupon .coupon_text p {font-size: 12px;font-weight: 400;font-family:'Noto Sans KR';}
+.mobile_event .cont_coupon .coupon_text p span {font-family:proxima-nova; font-weight: 500; font-size: 13px;}
+.mobile_event .cont_coupon .caution_list {position: relative; text-align: center; font-size: 13px; font-weight: 500; cursor: pointer; color: #fff;}
+.mobile_event .cont_coupon .caution_list:after {position: absolute;left: 50%;bottom: 0px;margin-left: -33px;display: block;content: "";width: 65px;height: 1px;background-color: #fff;}
+.mobile_event .cont_coupon .caution_list span {display: inline-block;padding: 0 16px 0 0;background: url(https://event-rs.hiphoper.com/event_marketing/2022/common/plus_w.png)  no-repeat right center;background-size: 10px 10.5px;width: 10px;height: 10.5px;}
+.mobile_event .dim_layer {background-color: rgba(000,000,000, .6);}
+.mobile_event .dim_layer .wrap_layer {max-height:600px;padding:28px 0 0;border-radius:10px; width:86vw; margin:0 auto; overflow-y:scroll; top:50%; transform:translateY(-50%)}
+.mobile_event .dim_layer .wrap_layer:after {content:'';position:absolute;left:0;bottom:0;width:100%;height:20px;background:#fff;}
+.mobile_event .dim_layer .wrap_layer>.btn_close{position:absolute;right:10px;top:10px;background-color:rgba(0,0,0,0);width:30px;height:30px;min-width:20px;outline:none;z-index:301;}
+.mobile_event .dim_layer .wrap_layer>.btn_close:after,
+.mobile_event .dim_layer .wrap_layer>.btn_close:before{width:2px;height:20px; background:#000}
+.mobile_event .dim_layer .wrap_layer .layer_cont {text-align:center;overflow-y:auto;bottom:0;top:20px;left:20px;right:25px;}
+.mobile_event .dim_layer .wrap_layer .layer_cont .tip_area {text-align: left;}
+.mobile_event .dim_layer .wrap_layer .layer_cont .cont_tip_toggle {padding: 35px 15px 36px; color: #000;}
+.mobile_event .dim_layer .wrap_layer .layer_cont h3 {font-weight:bold;font-size: 17px;}
+.mobile_event .dim_layer .wrap_layer .layer_cont .sub {padding: 12px 0 7px;}
+.mobile_event .dim_layer .wrap_layer .layer_cont .sub h4 {font-weight: 500; font-size: 14px; padding-bottom: 5px;}
+.mobile_event .dim_layer .wrap_layer .layer_cont .sub h4 span {font-size: 12px; font-weight: 400; color: #4c4c4c;}
+.mobile_event .dim_layer .wrap_layer .layer_cont .notice {border-top: 1px solid #000; padding: 12px 0;}
+.mobile_event .dim_layer .wrap_layer .layer_cont .notice p {font-size: 12px; font-weight: 400;}
+
+/*기획전 상단 mobile 공통*/
+.promotion_header .poz_rel{position: relative;}
+.promotion_header .button_wrapper ul {overflow:hidden; position: absolute; left: 50%; bottom: 8vw; width: 96%; transform: translateX(-50%);}
+.promotion_header .button_wrapper ul li {float:left; width:29.333vw; margin:2vw 0 0 2vw;}
+.promotion_header .button_wrapper ul li:first-child,
+.promotion_header .button_wrapper ul li:nth-child(2) {width:45.067vw}
+
+/* notice 공통 */
+.tip_wrapper{width: 100%;background: #f2f2f2;word-break:keep-all}
+.tip_area {margin:0 30px;text-align:center;}
+.tip_area .button_tip_toggle {display:block;width:100%;padding:17px 0;line-height:1}
+.tip_area .button_tip_toggle.on{padding:17px 0}
+.tip_area .button_tip_toggle span {display:inline-block;position:relative;font-family:Noto Sans KR;font-size:18px;color:#111;line-height:1;}
+.tip_area .button_tip_toggle span:after {content:'';display:inline-block;width:18px;height:10px;margin:0 0 0 6px;background:url(../img/event/0628_lucky/btn_arrow_black_off.png) center 4px no-repeat;vertical-align:3px; background-size: 10px 6px;}
+.tip_area .button_tip_toggle.on span:after {background:url(../img/event/0628_lucky/btn_arrow_black_on.png) center 4px no-repeat; background-size: 10px 6px;}
+.tip_area .cont_tip_toggle {padding:5px 0 36px;border-top:0;}
+.tip_area dl {text-align:left; overflow: hidden;margin-bottom:20px;}
+.tip_area dl:last-child {margin:0;}
+.tip_area dl dt {font-family:Noto Sans KR;font-weight:500;font-size:12px;color:#333;line-height:20px;letter-spacing:-0.025em;}
+.tip_area dl dt span{font-family:proxima-nova;}
+.tip_area dl dd {font-family:Noto Sans KR;font-size:12px;font-weight:300;color:#333;line-height:15px;letter-spacing:-0.025em;}
+.tip_area ul {padding-top:0;}
+.tip_area ul li {position:relative;padding-left:6px;padding-bottom:6px;text-indent:-6px;}
+.tip_area ul li ul {padding:0 0 0 3px;}
+.tip_area ul li.padl12{padding-left:12px;margin-left:5px;margin-bottom:0;line-height: 1.2;margin-bottom:3px;}
+.tip_area ul li ._asterisk{vertical-align: -4px}
+.tip_area ul li:after {content:'';display:block;clear:both;}
+.tip_area ul li .txt_sub {color:#777;}
+.tip_area ul li .txt_point {color:#f7461d;}
