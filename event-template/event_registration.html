@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HHP CMS Event Template</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yzy2fux.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&amp;subset=korean">
+    <link rel="stylesheet" href="./css/plugin.css">
+	<script src="./js/plugin.js"></script>
+    <style>
+        #container {max-width: 1260px; width: 100%; margin: 0 auto; padding: 50px 100px; background-color: #d7d7d7;}
+        h2 {font-size: 30px; display: inline-block; line-height: 1.2; color: #000;}
+        .existing-wrap {position: relative; width: 100%; margin: 50px auto;}
+        .existing-wrap div {position: relative; background-color: #fff; padding: 50px;}
+        .new-wrap {background-color: #c5c5c5; width: 1260px;}
+        .reg-wrap {position: relative; padding: 50px;}
+        .reg-tab {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; height: 50px; box-sizing: border-box;}
+        .reg-tab li {text-align: center;font-size: 20px; height: 50px; line-height: 50px;}
+        .reg-tab li a {display: inline-block; width: 100%; height: 100%;}
+        .reg-main {position: relative; width: 100%;}
+        .reg-main .reg-inner {position: relative; padding: 50px; background-color: #fff;}
+        /* .reg-main .reg-inner > div {padding-bottom: 20px;} */
+        .reg-main fieldset {display: flex; width: 100%; color: #000; padding-bottom: 30px;}
+        .reg-main fieldset label {width: 30%; font-size: 18px; line-height: 35px;}
+        .reg-main fieldset input {width: 50%; height: 35px; border: 1px solid gray;}
+        .reg-main fieldset textarea {width: 50%; height: 100px; border: 1px solid gray;}
+        .reg-main fieldset .submit {width: 7%; margin: 0 0 0 15px;font-size: 16px;line-height: 33px;}
+        .reg-main .html-reg fieldset textarea {height: 300px;}
+        .reg-tab li a:hover,
+        .reg-tab li a.active{background:#fff; color:#gray;}
+        .reg-tab li a.active{border-bottom:1px solid #000;}
+        .img-reg .img-submit {position: absolute; top: 20px; right: 20px;}
+        .reg-submit {position: absolute; bottom: 0; right: 0; margin: 20px;}
+        .reg-submit input {width: 70px; height: 35px; position: relative; background-color: aliceblue; font-size: 18px;}
+
+        .regList-wrap {position: relative; padding: 0 50px 50px;}
+        .regList-wrap h3 {font-size: 20px; padding-bottom: 20px;}
+        .regList-wrap .regList-inner {position: relative; padding: 50px; background-color: #fff;}
+        .regList-wrap .regList-inner .regList {position: relative; width: 100%; height: 100px; border: 1px solid gray; margin-bottom: 25px; text-align: center; font-size: 20px; font-weight: 500; line-height: 100px; cursor: pointer;}
+        .regList-wrap .regList-inner .regList div {display: inline-block; position: absolute; right: 3%;}
+        .regList-wrap .regList-inner .regList div input {font-size: 16px; height: 35px; line-height: 35px;}
+        .regList.over {border: 1px dashed grey;}
+        .link-tab {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; height: 20px; box-sizing: border-box; margin-bottom: 25px;}
+        .link-tab li {text-align: center;font-size: 18px; height: 20px; line-height: 20px;}
+        .link-tab li a {display: inline-block; width: 100%; height: 100%;}
+        #type01:checked ~ #typeA {display: block;}
+        #type02:checked ~ #typeB {display: block;}
+        /* .link-tab input:checked:before {
+            background-color: #12CBC4;
+        }
+        .link-tab input:before {
+            content: '';
+            display: block;
+            box-sizing: content-box;
+            width: 16px;
+            height: 16px;
+            background-color: #ccc;
+        } */
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>CMS EVENT Registration</h2>
+        <div class="existing-wrap">
+            <h2 style="font-size: 20px; color: #525252;">* 기존</h2>
+            <div>
+                <img src="./img/event-top.png" alt="">
+                <img src="./img/event-top2.png" alt="">
+            </div>
+        </div>
+        <h2 style="font-size: 22px; color: #525252;">* NEW Template</h2>
+        <div class="new-wrap">
+            <div class="reg-wrap">
+                <ul class="reg-tab">
+                    <li><a href="#tab01">이미지</a></li>
+                    <li><a href="#tab02">쿠폰</a></li>
+                    <li><a href="#tab03">링크</a></li>
+                    <li><a href="#tab04">동영상</a></li>
+                    <li><a href="#tab05">HTML</a></li>
+                </ul>
+                <div class="reg-main">
+                    <div class="reg-inner">
+                        <div class="img-reg" id="tab01">
+                            <div class="img-submit">
+                                <input type="submit" value="+">
+                            </div>
+                            <fieldset>
+                                <label for="img">1-1. 이미지</label>
+                                <input type="text" name="" id="">
+                                <input type="submit" class="submit" value="선택">
+                            </fieldset>
+                            <fieldset>
+                                <label for="img-link">1-2. 이미지 URL</label>
+                                <input type="text" name="" id="img-link">
+                            </fieldset>
+                        </div>
+                        <div class="coupon-reg" id="tab02">
+                            <fieldset>
+                                <label for="cpn-title">1. 쿠폰 타이틀</label>
+                                <input type="text" name="" id="cpn-title">
+                            </fieldset>
+                            <fieldset>
+                                <label for="cpn-img">2-1. 쿠폰 이미지</label>
+                                <input type="text" name="" id="cpn-img">
+                                <input type="submit" class="submit" value="선택">
+                            </fieldset>
+                            <fieldset>
+                                <label for="cpn-num">2-2. 쿠폰 번호</label>
+                                <input type="text" name="" id="cpn-num">
+                            </fieldset>
+                            <fieldset>
+                                <label for="cpn-date">3. 쿠폰 기간</label>
+                                <input type="text" name="" id="cpn-date">
+                            </fieldset>
+                            <fieldset>
+                                <label for="cpn-notice">4-1. 유의사항 텍스트</label>
+                                <input type="text" name="" id="cpn-notice">
+                            </fieldset>
+                            <fieldset>
+                                <label for="cpn-noticePop">4-2. 유의사항 내용 (팝업)</label>
+                                <textarea name="" id="cpn-noticePop" cols="30" rows="10"></textarea>
+                            </fieldset>
+                            <fieldset>
+                                <label for="cpn-backColor">5. 쿠폰 배경색</label>
+                                <input type="text" name="" id="cpn-backColor">
+                            </fieldset>
+                        </div>
+                        <div class="link-reg" id="tab03">
+                            <ul class="link-tab">
+                                <li>
+                                    <a href="#typeA">
+                                        <input type="radio" name="tabs" id="type01" checked>
+                                        <label for="type01">타입A</label>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#typeB">
+                                        <input type="radio" name="tabs" id="type02">
+                                        <label for="type02">타입B</label>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div id="typeA" class="link-type">
+                                <fieldset>
+                                    <label for="link-img">A-1. 링크 이미지</label>
+                                    <input type="text" name="" id="link-img">
+                                    <input type="submit" class="submit" value="선택">
+                                </fieldset>
+                                <fieldset>
+                                    <label for="link">A-2. 링크 URL</label>
+                                    <input type="text" name="" id="link">
+                                </fieldset>
+                                <fieldset>
+                                    <label for="link-text">A-3. 링크 텍스트</label>
+                                    <input type="text" name="" id="">
+                                </fieldset>
+                            </div>
+                            <div id="typeB" class="link-type">
+                                <fieldset>
+                                    <label for="link-img">B-1. 링크 이미지</label>
+                                    <input type="text" name="" id="link-img">
+                                    <input type="submit" class="submit" value="선택">
+                                </fieldset>
+                                <fieldset>
+                                    <label for="link">B-2. 링크 URL</label>
+                                    <input type="text" name="" id="link">
+                                </fieldset>
+                                <fieldset>
+                                    <label for="link-text">B-3. 링크 텍스트</label>
+                                    <input type="text" name="" id="">
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="video-reg" id="tab04">
+                            <fieldset>
+                                <label for="video-img">1. 동영상</label>
+                                <input type="text" name="" id="">
+                                <input type="submit" class="submit" value="선택">
+                            </fieldset>
+                            <fieldset>
+                                <label for="video-link">2. 유튜브 URL</label>
+                                <input type="text" name="" id="video-link">
+                            </fieldset>
+                            <fieldset>
+                                <label for="video-backColor">3. 동영상 배경색</label>
+                                <input type="text" name="" id="video-backColor">
+                            </fieldset>
+                        </div>
+                        <div class="html-reg" id="tab05">
+                            <fieldset>
+                                <label for="code">1. html 코드 입력해주세요.</label>
+                                <textarea name="" id="" cols="80" rows="10"></textarea>
+                                <!-- <input type="submit" class="submit"> -->
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="reg-submit">
+                        <!-- <input type="submit" value="추가"> -->
+                        <input type="submit" value="등록">
+                    </div>
+                </div>
+            </div>
+            <div class="regList-wrap">
+                <div class="regList-inner">
+                    <h3>등록 LIST</h3>
+                    <div class="dag-wrap">
+                        <div class="regList fa fa-trash" draggable="true">Image Section
+                            <div>
+                                <input type="submit" value="수정">
+                                <input type="submit" value="삭제">
+                            </div>
+                        </div>
+                        <div class="regList fa fa-trash" draggable="true">쿠폰 Section
+                            <div>
+                                <input type="submit" value="수정">
+                                <input type="submit" value="삭제">
+                            </div>
+                        </div>
+                        <div class="regList fa fa-trash" draggable="true">동영상 Section
+                            <div>
+                                <input type="submit" value="수정">
+                                <input type="submit" value="삭제">
+                            </div>
+                        </div>
+                        <div class="regList fa fa-trash" draggable="true">링크 Section
+                            <div>
+                                <input type="submit" value="수정">
+                                <input type="submit" value="삭제">
+                            </div>
+                        </div>
+                        <div class="regList fa fa-trash" draggable="true">HTML Section
+                            <div>
+                                <input type="submit" value="수정">
+                                <input type="submit" value="삭제">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reg-submit">
+                        <input type="submit" value="저장">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="existing-wrap">
+            <h2 style="font-size: 20px; color: #525252;">* 기존</h2>
+            <div>
+                <!-- <h3>기존 CMS</h3> -->
+                <img src="./img/event-product.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+    $(function(){
+        console.log('dddd')
+        $('.reg-inner > div').hide();
+        $('.reg-tab a').click(function () {
+            $('.reg-inner > div').hide().filter(this.hash).fadeIn();
+            $('.reg-tab a').removeClass('active');
+            $(this).addClass('active');
+            return false;
+        }).filter(':eq(0)').click();
+
+        $('.link-reg > div').hide();
+        $('.link-tab a').click(function () {
+            $('.link-reg > div').hide().filter(this.hash).fadeIn();
+            $('.link-tab a').removeClass('active');
+            $(this).addClass('active');
+
+            return false;
+        }).filter(':eq(0)').click();
+
+
+        var dragElement = null;
+        // drag and drop effects
+    
+        $('.dag-wrap').on('dragstart','.regList',function(event){
+            $(this).css("opacity", 0.4);
+            dragElement = $(this);
+            event.originalEvent.dataTransfer.effectAllowed = 'move';
+            event.originalEvent.dataTransfer.setData('text/html', $(this).html());
+        });
+    
+        $('.dag-wrap').on('dragenter','.regList',function(){
+            $(this).addClass("over");
+        });
+    
+        $('.dag-wrap').on('dragleave','.regList',function(){
+            $(this).removeClass("over");
+        });
+    
+    
+        $('.dag-wrap').on('dragover','.regList',function(event){
+            if (event.preventDefault) {
+                event.preventDefault(); // Necessary. Allows us to drop.
+            }
+        event.originalEvent.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+        return false;
+        });
+    
+        // drag and drop handle
+    
+        $('.dag-wrap').on('drop','.regList',function(event){
+        if (event.stopPropagation) {
+            event.stopPropagation(); 
+        }
+    
+        if (dragElement != $(this)) {
+            $(dragElement).html($(this).html())
+            dragElement.innerHTML = this.innerHTML;
+            this.innerHTML = event.originalEvent.dataTransfer.getData('text/html');
+        }
+        return false;
+        });
+    
+        $('.dag-wrap').on('dragend','.regList',function(){
+            $('.dag-wrap .regList').removeClass('over');
+            $(this).css('opacity', 1);
+        });
+    });
+
+        
+    </script>
+</body>
+</html>
